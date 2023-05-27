@@ -10,17 +10,1276 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[       844,         34]
-NotebookOptionsPosition[       564,         21]
-NotebookOutlinePosition[       987,         37]
-CellTagsIndexPosition[       944,         34]
+NotebookDataLength[     64975,       1335]
+NotebookOptionsPosition[     62021,       1280]
+NotebookOutlinePosition[     62424,       1296]
+CellTagsIndexPosition[     62381,       1293]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell["Create a folder to export to:", "Text",
+ CellChangeTimes->{{3.894183837563555*^9, 
+  3.894183841847952*^9}},ExpressionUUID->"cfc99fe3-73bf-4f70-8496-\
+cc7a6553935d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$ExportFolder", "=", 
+  RowBox[{
+  "File", "[", 
+   "\"\<C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\astronomical-computation-and-data\\\\exports\>\"", 
+   "]"}]}]], "Code",
+ CellChangeTimes->{{3.8941837665682755`*^9, 3.8941837749866233`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"1dee81c1-6219-494c-9a41-2a21359ced2f"],
+
+Cell[BoxData[
+ RowBox[{"File", "[", 
+  TemplateBox[{
+   "\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\astronomical-computation-and-data\\\\exports\""},
+   "FileArgument"], "]"}]], "Output",
+ CellChangeTimes->{{3.894183776996394*^9, 3.894183777155935*^9}, 
+   3.894183923081523*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"a73f58ce-386a-4a71-aa85-1537ec28f092"]
+}, Open  ]],
+
+Cell["Does the file exist?", "Text",
+ CellChangeTimes->{{3.8941838441269026`*^9, 
+  3.8941838468975334`*^9}},ExpressionUUID->"31daf015-f060-47ff-861f-\
+d2e3dfac9701"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileExistsQ", "[", "$ExportFolder", "]"}]], "Input",
+ CellChangeTimes->{{3.89418377843783*^9, 3.894183782499278*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"3687e7b9-c5db-4ed8-b3ed-67c2bde005ba"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.894183782778372*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"d7c2ab84-7988-49ae-8701-655037f8ab2e"]
+}, Open  ]],
+
+Cell["Is the file a directory?", "Text",
+ CellChangeTimes->{{3.8941838517906895`*^9, 
+  3.894183855077389*^9}},ExpressionUUID->"afbe5571-8857-4bb4-b483-\
+179f9fbcf911"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DirectoryQ", "[", "$ExportFolder", "]"}]], "Input",
+ CellChangeTimes->{{3.8941837925453444`*^9, 3.8941837962095923`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"2fe8e86a-adef-44e6-8695-752f6ac44203"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.894183796465803*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"034540c7-0f07-4d17-8671-8cf740337641"]
+}, Open  ]],
+
+Cell["See information about the folder:", "Text",
+ CellChangeTimes->{{3.8941838576920547`*^9, 
+  3.8941838634311266`*^9}},ExpressionUUID->"414a287f-20e6-4d55-b6d4-\
+f85bc1825fb1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Information", "[", "$ExportFolder", "]"}]], "Input",
+ CellChangeTimes->{{3.894183785517475*^9, 3.89418378955871*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"8a41d0f8-9d09-422c-ab18-ac8aff9089d3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    TagBox[GridBox[{
+       {
+        ItemBox[
+         PaneBox[
+          StyleBox["\<\" File\"\>", "InformationTitleText",
+           StripOnInput->False],
+          FrameMargins->{{4, 0}, {-1, 1}}],
+         BaseStyle->"InformationTitleBackground",
+         StripOnInput->False]},
+       {
+        PaneBox[GridBox[{
+           {
+            
+            DynamicModuleBox[{System`InformationDump`open$$ = {
+             False, False, False, False, False, False, False, False, False, 
+              False, False, False, False, False, False, False, False, False, 
+              False, False, False, False, False, False, False, False, False, 
+              False, False, False, False, False, False, False, False, False, 
+              False, False, False, False, False, False, False}}, 
+             StyleBox[GridBox[{
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" File Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"FileName\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "FileName", 
+                   "Tooltip"]& ], "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - \
+Marshall University\\\\GitHub\\\\astronomical-computation-and-data\\\\exports\
+\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Directory Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"DirectoryName\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "DirectoryName", 
+                   "Tooltip"]& ], "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - \
+Marshall University\\\\GitHub\\\\astronomical-computation-and-data\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   
+                   StyleBox["\<\" Absolute File Name\"\>", 
+                    "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"AbsoluteFileName\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "AbsoluteFileName", 
+                   "Tooltip"]& ], "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - \
+Marshall University\\\\GitHub\\\\astronomical-computation-and-data\\\\exports\
+\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   
+                   StyleBox["\<\" Absolute Short File Name\"\>", 
+                    "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"AbsoluteShortFileName\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "AbsoluteShortFileName", 
+                   "Tooltip"]& ], \
+"\<\"C:\\\\Users\\\\Peter\\\\ONEDRI~1\\\\GitHub\\\\ASTRON~1\\\\exports\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Short File Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"ShortFileName\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "ShortFileName", 
+                   "Tooltip"]& ], \
+"\<\"C:\\\\Users\\\\Peter\\\\ONEDRI~1\\\\GitHub\\\\ASTRON~1\\\\exports\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" File Base Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"FileBaseName\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "FileBaseName", 
+                   "Tooltip"]& ], "\<\"exports\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" File Extension\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"FileExtension\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "FileExtension", "Tooltip"]& ], "\<\"\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Creation Date\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"CreationDate\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "CreationDate", "Tooltip"]& ], 
+                 TemplateBox[{
+                   RowBox[{"\"Sat 27 May 2023 09:42:34\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "4"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                   RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2023", ",", "5", ",", "27", ",", "9", ",", "42", ",", 
+                    "34.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
+                     ",", 
+                    RowBox[{"-", "4.`"}]}], "]"}]},
+                  "DateObject",
+                  Editable->False]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Last Access Date\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"LastAccessDate\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "LastAccessDate", "Tooltip"]& ], 
+                 TemplateBox[{
+                   RowBox[{"\"Sat 27 May 2023 09:42:34\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "4"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                   RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2023", ",", "5", ",", "27", ",", "9", ",", "42", ",", 
+                    "34.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
+                     ",", 
+                    RowBox[{"-", "4.`"}]}], "]"}]},
+                  "DateObject",
+                  Editable->False]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   
+                   StyleBox["\<\" Last Modification Date\"\>", 
+                    "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"LastModificationDate\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "LastModificationDate", "Tooltip"]& ], 
+                 TemplateBox[{
+                   RowBox[{"\"Sat 27 May 2023 09:42:34\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "4"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                   RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2023", ",", "5", ",", "27", ",", "9", ",", "42", ",", 
+                    "34.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"",
+                     ",", 
+                    RowBox[{"-", "4.`"}]}], "]"}]},
+                  "DateObject",
+                  Editable->False]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" File Type\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"FileType\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "FileType", 
+                   "Tooltip"]& ], "\<\"Directory\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Byte Count\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"ByteCount\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "ByteCount", "Tooltip"]& ], "0"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Raw Byte Count\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"RawByteCount\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "RawByteCount", "Tooltip"]& ], "0"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Block Count\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"BlockCount\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "BlockCount", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Block Size\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"BlockSize\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "BlockSize", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Owner Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"OwnerName\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "OwnerName", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Group Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"GroupName\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "GroupName", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Read Only\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"ReadOnly\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "ReadOnly", "Tooltip"]& ], "False"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Archive\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Archive\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Archive", "Tooltip"]& ], "False"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Hidden\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Hidden\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Hidden", "Tooltip"]& ], "False"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" System\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"System\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "System", "Tooltip"]& ], "False"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Compressed\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Compressed\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Compressed", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Encrypted\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Encrypted\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Encrypted", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" File Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"FileAttributes\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "FileAttributes", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Offline\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Offline\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Offline", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Reparse Point\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"ReparsePoint\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "ReparsePoint", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Sparse\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Sparse\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Sparse", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Temporary\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Temporary\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Temporary", "Tooltip"]& ], 
+                 RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}]}
+               },
+               AutoDelete->False,
+               GridBoxAlignment->{"Columns" -> {Right, Left}},
+               GridBoxDividers->None,
+               GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+               GridBoxSpacings->{"Columns" -> {
+                   Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                   Offset[0.27999999999999997`]}, "Rows" -> {
+                   Offset[0.2], {
+                    Offset[0.8]}, 
+                   Offset[0.2]}}], "DialogStyle",
+              StripOnInput->False],
+             DynamicModuleValues:>{}]}
+          },
+          DefaultBaseStyle->"Column",
+          GridBoxAlignment->{"Columns" -> {{Left}}},
+          GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.5599999999999999]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[3.6]}, 
+              Offset[0.2]}}],
+         FrameMargins->6]}
+      },
+      DefaultBaseStyle->"Column",
+      FrameStyle->Directive[
+        GrayLevel[0.8], 
+        Thickness[Tiny]],
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxDividers->{
+       "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "File", "FileName" -> 
+    "C:\\Users\\Peter\\OneDrive - Marshall \
+University\\GitHub\\astronomical-computation-and-data\\exports", 
+    "DirectoryName" -> 
+    "C:\\Users\\Peter\\OneDrive - Marshall \
+University\\GitHub\\astronomical-computation-and-data", "AbsoluteFileName" -> 
+    "C:\\Users\\Peter\\OneDrive - Marshall \
+University\\GitHub\\astronomical-computation-and-data\\exports", 
+    "AbsoluteShortFileName" -> 
+    "C:\\Users\\Peter\\ONEDRI~1\\GitHub\\ASTRON~1\\exports", "ShortFileName" -> 
+    "C:\\Users\\Peter\\ONEDRI~1\\GitHub\\ASTRON~1\\exports", "FileBaseName" -> 
+    "exports", "FileExtension" -> "", "CreationDate" -> 
+    DateObject[{2023, 5, 27, 9, 42, 34.}, "Instant", "Gregorian", -4.], 
+    "LastAccessDate" -> 
+    DateObject[{2023, 5, 27, 9, 42, 34.}, "Instant", "Gregorian", -4.], 
+    "LastChangeDate" -> Missing["NotApplicable"], "LastModificationDate" -> 
+    DateObject[{2023, 5, 27, 9, 42, 34.}, "Instant", "Gregorian", -4.], 
+    "FileType" -> "Directory", "ByteCount" -> 0, "RawByteCount" -> 0, 
+    "BlockCount" -> Missing["NotAvailable"], "BlockSize" -> 
+    Missing["NotAvailable"], "FileAssociation" -> None, "Permissions" -> 
+    Missing["NotApplicable"], "UnixPermissionsCode" -> 
+    Missing["NotApplicable"], "UnixPermissionsString" -> 
+    Missing["NotApplicable"], "Device" -> Missing["NotApplicable"], "Inode" -> 
+    Missing["NotApplicable"], "LinkCount" -> Missing["NotApplicable"], "UID" -> 
+    Missing["NotApplicable"], "GID" -> Missing["NotApplicable"], "SID" -> 
+    Missing["NotApplicable"], "OwnerName" -> Missing["NotAvailable"], 
+    "GroupName" -> Missing["NotAvailable"], "SetGroupID" -> 
+    Missing["NotApplicable"], "SetUserID" -> Missing["NotApplicable"], 
+    "Sticky" -> Missing["NotApplicable"], "ReadOnly" -> False, "Archive" -> 
+    False, "Hidden" -> False, "System" -> False, "Compressed" -> 
+    Missing["NotAvailable"], "Encrypted" -> Missing["NotAvailable"], 
+    "FileAttributes" -> Missing["NotAvailable"], "Offline" -> 
+    Missing["NotAvailable"], "ReparsePoint" -> Missing["NotAvailable"], 
+    "Sparse" -> Missing["NotAvailable"], "Temporary" -> 
+    Missing["NotAvailable"]|>, True]]], "Output",
+ CellChangeTimes->{3.8941837906571684`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"720c5b17-5efc-4baf-9f0c-bffccbee49aa"]
+}, Open  ]],
+
+Cell["See the files in the folder I will export to.", "Text",
+ CellChangeTimes->{{3.89418382829291*^9, 
+  3.894183834963626*^9}},ExpressionUUID->"ccd20abc-d0fb-459b-a2b6-\
+2ac12da72122"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNames", "[", 
+  RowBox[{"\"\<*\>\"", ",", "$ExportFolder"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8941838160772724`*^9, 3.8941838234567823`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"03083df1-059f-4e19-874c-057f12a0971b"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.894183823780793*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"a4249b4b-28de-43ac-b7d1-e673c502f1c5"]
+}, Open  ]],
+
+Cell["See the date the folder was modified on.", "Text",
+ CellChangeTimes->{{3.8941838838771324`*^9, 
+  3.894183900014948*^9}},ExpressionUUID->"c8d29420-0b51-4320-a331-\
+5d492c1e9a8f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileDate", "[", "$ExportFolder", "]"}]], "Input",
+ CellChangeTimes->{{3.8941838864758472`*^9, 3.8941838914929705`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"e0453a5b-7f36-4d38-819b-8263ceae9d09"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"\"Sat 27 May 2023 09:42:34\"", 
+     StyleBox[
+      RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+        StyleBox[
+         RowBox[{"-", "4"}], NumberMarks -> False, StripOnInput -> False]}], 
+      FontColor -> GrayLevel[0.5]]}], 
+   RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{
+          "2023", ",", "5", ",", "27", ",", "9", ",", "42", ",", "34.`"}], 
+         "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+       RowBox[{"-", "4.`"}]}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.8941838917343163`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"241f63e6-029e-4d5e-b533-393e114eb182"]
+}, Open  ]],
+
+Cell["FileSize doesn\[CloseCurlyQuote]t work with directories.", "Text",
+ CellChangeTimes->{{3.894183935194337*^9, 
+  3.8941839413154097`*^9}},ExpressionUUID->"ec28905e-f0cb-41eb-8c04-\
+a9f011e2deaf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileSize", "[", "$ExportFolder", "]"}]], "Input",
+ CellChangeTimes->{{3.894183918405181*^9, 3.8941839217382727`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"7ea076ad-51af-494a-9900-fb35b5c74a7d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FileSize", "fdir", 
+   "\"The specified path \\!\\(\\*RowBox[{\\\"File\\\", \\\"[\\\", \
+TemplateBox[List[\\\"\\\\\\\"C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\Peter\\\\\
+\\\\\\\\\\\\OneDrive - Marshall \
+University\\\\\\\\\\\\\\\\GitHub\\\\\\\\\\\\\\\\astronomical-computation-and-\
+data\\\\\\\\\\\\\\\\exports\\\\\\\"\\\"], \\\"FileArgument\\\"], \
+\\\"]\\\"}]\\) refers to a directory; a file path was expected.\"", 2, 9, 1, 
+   28313553558452273431, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8941839233404894`*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"13e6404c-8ebe-4540-805e-fa175a53fa97"],
+
+Cell[BoxData[
+ RowBox[{"FileSize", "[", 
+  RowBox[{"File", "[", 
+   TemplateBox[{
+    "\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\astronomical-computation-and-data\\\\exports\""},
+    "FileArgument"], "]"}], "]"}]], "Output",
+ CellChangeTimes->{3.8941839235104885`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"d181bf9d-0b8f-462d-9ca8-83c9dd75e03e"]
+}, Open  ]],
+
+Cell["I can pacletize the resource function DirectorySize.", "Text",
+ CellChangeTimes->{{3.8941839439987164`*^9, 
+  3.894183954763982*^9}},ExpressionUUID->"16c37328-938e-4fb3-8678-\
+16dab2bacb37"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ResourceSearch", "[", "\"\<DirectorySize\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8941839724404817`*^9, 3.894183977395685*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"a6d7f737-c327-404d-8ea9-bdedf6a99a53"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {<|
+       "Name" -> "DirectorySize", "ResourceType" -> "Function", 
+        "ResourceObject" -> 
+        ResourceObject[<|
+          "Name" -> "DirectorySize", "ShortName" -> "DirectorySize", "UUID" -> 
+           "b713a73d-470d-452c-9058-bd406a831c85", "ResourceType" -> 
+           "Function", "Version" -> "2.0.0", "Description" -> 
+           "Find the total size of a directory", "RepositoryLocation" -> 
+           URL["https://www.wolframcloud.com/obj/resourcesystem/api/1.0"], 
+           "SymbolName" -> 
+           "FunctionRepository`$c9077b0cb354464789f30ffdbf391463`\
+DirectorySize"|>], "Description" -> "Find the total size of a directory", 
+        "Location" -> URL["https://resources.wolframcloud.com"], 
+        "DocumentationLink" -> 
+        URL["https://resources.wolframcloud.com/FunctionRepository/resources/\
+DirectorySize"]|>}, "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[145.60000000000002`], 
+            "ResourceType" -> 
+            TypeSystem`PackageScope`AtomShape[89.60000000000001], 
+            "ResourceObject" -> TypeSystem`PackageScope`AtomShape[60], 
+            "Description" -> TypeSystem`PackageScope`AtomShape[380.8], 
+            "Location" -> TypeSystem`PackageScope`AtomShape[60], 
+            "DocumentationLink" -> TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 1, 
+        DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 1], "Meta" -> <||>, "RowTarget" -> 20, 
+     "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`HeaderShape[<|{All, "Name"} -> 
+        1, {All, "ResourceType"} -> 1, {All, "ResourceObject"} -> 
+        1, {All, "Description"} -> 1, {All, "Location"} -> 
+        1, {All, "DocumentationLink"} -> 1|>, 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          
+          TypeSystem`PackageScope`RowShape[<|
+           "Name" -> TypeSystem`PackageScope`AtomShape[145.60000000000002`], 
+            "ResourceType" -> 
+            TypeSystem`PackageScope`AtomShape[89.60000000000001], 
+            "ResourceObject" -> TypeSystem`PackageScope`AtomShape[60], 
+            "Description" -> TypeSystem`PackageScope`AtomShape[380.8], 
+            "Location" -> TypeSystem`PackageScope`AtomShape[60], 
+            "DocumentationLink" -> TypeSystem`PackageScope`AtomShape[60]|>], 
+          DirectedInfinity[1], 6, {All}]], 1, 
+        DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Name", "ResourceType", "ResourceObject", "Description", "Location", 
+         "DocumentationLink"}, {
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[ResourceObject], 
+         TypeSystem`Atom[String], 
+         TypeSystem`Atom[URL], 
+         TypeSystem`Atom[URL]}], 1], "Path" -> {}, "DisplayedRowCount" -> 1, 
+     "DisplayedColumnCount" -> 6, "DataRowCount" -> 1, "DataColumnCount" -> 6,
+      "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
+     "UpdateType" -> 1|>, TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Name", 
+                  Style[
+                  "Name", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Name"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Name"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceType", 
+                  Style[
+                  "ResourceType", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "ResourceType"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "ResourceType"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["ResourceObject", 
+                  Style[
+                  "ResourceObject", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "ResourceObject"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "ResourceObject"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Description", 
+                  Style[
+                  "Description", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Description"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Description"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Location", 
+                  Style[
+                  "Location", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "Location"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "Location"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["DocumentationLink", 
+                  Style[
+                  "DocumentationLink", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   All, "DocumentationLink"}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                All, "DocumentationLink"}, "ColumnHeader", True], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}]}, {
+            Item[
+             Pane[
+              Annotation["DirectorySize", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Name"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{145.60000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Function", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["ResourceType"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{89.60000000000001, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                
+                TemplateBox[{
+                 "\"ResourceObject\"", "\"[\"", "\"\\\"\"", 
+                  "\"DirectorySize\"", "\"\\\"\"", "\"]\""}, "RowDefault"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["ResourceObject"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation["Find the total size of a directory", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Description"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{380.8, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink["https://resources.wolframcloud.com", 
+                URL["https://resources.wolframcloud.com"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["Location"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               Hyperlink[
+               "https://resources.wolframcloud.com/FunctionReposit...", 
+                URL[
+                "https://resources.wolframcloud.com/FunctionRepository/\
+resources/DirectorySize"]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1, 
+                 Key["DocumentationLink"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{1392., {32.63403328722343, 38.36596671277657}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{1392., {32.63403328722343, 38.36596671277657}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8941839803803587`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"39b70369-2b0a-43e9-ad43-8d4a5026c25a"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"PacletizeResourceFunction", "[", 
+  RowBox[{"{", "\"\<\>\"", "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.89418395576506*^9, 
+  3.8941839585932217`*^9}},ExpressionUUID->"4da83da0-c1c9-4aa9-91d0-\
+30b9e683fd9e"]
 },
 WindowSize->{574.8, 574.8},
-WindowMargins->{{18, Automatic}, {-22.799999999999955`, Automatic}},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 31, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7ed1a0b4-9ad5-4c0a-bb8d-cb17397ea0d9"
@@ -36,9 +1295,49 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[561, 20, 171, 3, 35, "Text",ExpressionUUID->"cfc99fe3-73bf-4f70-8496-cc7a6553935d"],
+Cell[CellGroupData[{
+Cell[757, 27, 371, 8, 50, "Code",ExpressionUUID->"1dee81c1-6219-494c-9a41-2a21359ced2f"],
+Cell[1131, 37, 386, 8, 54, "Output",ExpressionUUID->"a73f58ce-386a-4a71-aa85-1537ec28f092"]
+}, Open  ]],
+Cell[1532, 48, 166, 3, 35, "Text",ExpressionUUID->"31daf015-f060-47ff-861f-d2e3dfac9701"],
+Cell[CellGroupData[{
+Cell[1723, 55, 219, 3, 28, "Input",ExpressionUUID->"3687e7b9-c5db-4ed8-b3ed-67c2bde005ba"],
+Cell[1945, 60, 151, 2, 32, "Output",ExpressionUUID->"d7c2ab84-7988-49ae-8701-655037f8ab2e"]
+}, Open  ]],
+Cell[2111, 65, 168, 3, 35, "Text",ExpressionUUID->"afbe5571-8857-4bb4-b483-179f9fbcf911"],
+Cell[CellGroupData[{
+Cell[2304, 72, 223, 3, 28, "Input",ExpressionUUID->"2fe8e86a-adef-44e6-8695-752f6ac44203"],
+Cell[2530, 77, 151, 2, 32, "Output",ExpressionUUID->"034540c7-0f07-4d17-8671-8cf740337641"]
+}, Open  ]],
+Cell[2696, 82, 179, 3, 35, "Text",ExpressionUUID->"414a287f-20e6-4d55-b6d4-f85bc1825fb1"],
+Cell[CellGroupData[{
+Cell[2900, 89, 219, 3, 28, "Input",ExpressionUUID->"8a41d0f8-9d09-422c-ab18-ac8aff9089d3"],
+Cell[3122, 94, 18714, 419, 629, "Output",ExpressionUUID->"720c5b17-5efc-4baf-9f0c-bffccbee49aa"]
+}, Open  ]],
+Cell[21851, 516, 186, 3, 35, "Text",ExpressionUUID->"ccd20abc-d0fb-459b-a2b6-2ac12da72122"],
+Cell[CellGroupData[{
+Cell[22062, 523, 253, 4, 28, "Input",ExpressionUUID->"03083df1-059f-4e19-874c-057f12a0971b"],
+Cell[22318, 529, 165, 3, 32, "Output",ExpressionUUID->"a4249b4b-28de-43ac-b7d1-e673c502f1c5"]
+}, Open  ]],
+Cell[22498, 535, 184, 3, 35, "Text",ExpressionUUID->"c8d29420-0b51-4320-a331-5d492c1e9a8f"],
+Cell[CellGroupData[{
+Cell[22707, 542, 221, 3, 28, "Input",ExpressionUUID->"e0453a5b-7f36-4d38-819b-8263ceae9d09"],
+Cell[22931, 547, 701, 18, 42, "Output",ExpressionUUID->"241f63e6-029e-4d5e-b533-393e114eb182"]
+}, Open  ]],
+Cell[23647, 568, 200, 3, 35, "Text",ExpressionUUID->"ec28905e-f0cb-41eb-8c04-a9f011e2deaf"],
+Cell[CellGroupData[{
+Cell[23872, 575, 219, 3, 28, "Input",ExpressionUUID->"7ea076ad-51af-494a-9900-fb35b5c74a7d"],
+Cell[24094, 580, 681, 14, 45, "Message",ExpressionUUID->"13e6404c-8ebe-4540-805e-fa175a53fa97"],
+Cell[24778, 596, 376, 8, 54, "Output",ExpressionUUID->"d181bf9d-0b8f-462d-9ca8-83c9dd75e03e"]
+}, Open  ]],
+Cell[25169, 607, 196, 3, 35, "Text",ExpressionUUID->"16c37328-938e-4fb3-8678-16dab2bacb37"],
+Cell[CellGroupData[{
+Cell[25390, 614, 234, 3, 28, "Input",ExpressionUUID->"a6d7f737-c327-404d-8ea9-bdedf6a99a53"],
+Cell[25627, 619, 36140, 651, 90, "Output",ExpressionUUID->"39b70369-2b0a-43e9-ad43-8d4a5026c25a"]
+}, Open  ]],
+Cell[61782, 1273, 235, 5, 28, "Input",ExpressionUUID->"4da83da0-c1c9-4aa9-91d0-30b9e683fd9e"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
